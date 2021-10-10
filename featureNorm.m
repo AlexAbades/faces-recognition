@@ -25,7 +25,7 @@ X.logNorm = (X.logTime-X.mean_logTime)./X.std_logTime;
 
 
 X(:,{'GroupCount', 'mean_time', 'std_time', 'mean_logTime', 'std_logTime'}) = [];
-
+stats = grpstats(X(:,{'id', 'norm', 'logNorm'}), 'id', {'mean', 'std'});
 
 
 end

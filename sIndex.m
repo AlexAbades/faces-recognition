@@ -33,8 +33,12 @@ Sad_std = std(Sad(u,:).mean);
 
 % Change some labels for better understanding.
 Hap.Properties.VariableNames = {'f_ext', 'time'};
+figure()
+subplot(1,2,1)
+histfit(Hap.time)
 Sad.Properties.VariableNames = {'f_ext', 'time'};
-
+subplot(1,2,2)
+histfit(Sad.time)
 % Create a new column on each table class for the strngth indicator
 Hap.sindex = zeros(length(Hap.time),1);
 Sad.sindex = zeros(length(Sad.time),1);

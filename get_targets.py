@@ -1,7 +1,11 @@
+# This code locates the neutral photos in each member's data and then renames the files according
+# to the correct categorization. This was necessary because members in the group used different 
+# file names during testing
+
 import pandas as pd
 import os
 
-results = pd.read_csv('results_Helen.csv')
+results = pd.read_csv('') # path to raw data file here
 
 # get file names with correct targets
 happy = os.listdir('happy')
@@ -19,4 +23,4 @@ for file in results['file_name']:
 
 results['file_name'].replace(dict, inplace=True)
 
-results.to_csv('results_Helen_fixed.csv', index=False)
+results.to_csv('', index=False) # save to desired filename

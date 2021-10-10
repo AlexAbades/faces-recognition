@@ -1,3 +1,7 @@
+# this code is used to clean "weird" data from the test results. This includes wrong answers with response times
+# that indicate a mistake was made, and also wrong answers where the majority of participants misclassified 
+# the image, indicating that our initial classification was incorrect
+
 import pandas as pd
 import numpy as np
 import os
